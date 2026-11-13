@@ -79,7 +79,7 @@ export function PasswordInput(props) {
         aria-label={lihat ? 'Sembunyikan kata sandi' : 'Lihat kata sandi'}
         title={lihat ? 'Sembunyikan kata sandi' : 'Lihat kata sandi'}
       >
-        {lihat ? '🙈' : '👁️'}
+        {lihat ? '👁️' : '🙈'}
       </button>
     </div>
   );
