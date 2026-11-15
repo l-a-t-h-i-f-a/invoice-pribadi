@@ -29,6 +29,6 @@ export const KOP_INVOICE = {
 };
 
 // Blok tanda tangan invoice versi Mersif (penandatangan tetap dari .env)
-KOP_INVOICE.ttd = '/ttd-mersif.png';
+KOP_INVOICE.ttd = PERUSAHAAN.ttd;
 KOP_INVOICE.penandatangan = PERUSAHAAN.penandatangan;
 KOP_INVOICE.jabatan = PERUSAHAAN.jabatan;
