@@ -14,3 +14,21 @@ export const PERUSAHAAN = {
   ttd: '/ttd.png',
   stempel: '/stempel.png',
 };
+
+// Kop khusus invoice (sesuai template src/paper/Template Surat Dispensasi Mersif Academy.docx)
+export const KOP_INVOICE = {
+  nama: 'Mersif Academy',
+  alamat: [
+    'Dusun Ganggang, Desa Gadingan',
+    'Kec. Mojolaban, Kab. Sukoharjo',
+    'Jawa Tengah 57554',
+  ],
+  telp: '(+62) 895-8028-50204',
+  email: 'mersifacademy@gmail.com',
+  logo: '/logo-mersif.png',
+};
+
+// Blok tanda tangan invoice versi Mersif (penandatangan tetap dari .env)
+KOP_INVOICE.ttd = '/ttd-mersif.png';
+KOP_INVOICE.penandatangan = PERUSAHAAN.penandatangan;
+KOP_INVOICE.jabatan = PERUSAHAAN.jabatan;

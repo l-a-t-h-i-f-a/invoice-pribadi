@@ -6,7 +6,7 @@ import Gambar from '../components/Gambar';
 import AksiDokumen from '../components/AksiDokumen';
 import { num, rupiah, tanggal } from '../utils/format';
 import { bhpTagihan, namaPenerima, ringkas, subtotal, totalItems } from '../utils/tagihan';
-import { PERUSAHAAN } from '../utils/perusahaan';
+import { KOP_INVOICE } from '../utils/perusahaan';
 
 // "2026-07-23" -> "23-07-2026"
 const tglStrip = (d) => (d ? d.split('-').reverse().join('-') : '-');
@@ -75,7 +75,7 @@ export default function InvoiceCetak() {
 
       <article className="doc" ref={dokRef}>
         <header className="doc-head">
-          <Gambar src={PERUSAHAAN.logo} alt={PERUSAHAAN.nama} className="doc-logo" fallback={<h2 className="doc-logo-text">{PERUSAHAAN.nama}</h2>} />
+          <Gambar src={KOP_INVOICE.logo} alt={KOP_INVOICE.nama} className="doc-logo" fallback={<h2 className="doc-logo-text">{KOP_INVOICE.nama}</h2>} />
           <div className="doc-title">
             <h1>{lunas ? 'Receipt' : 'Invoice'}&nbsp; {inv.jenis}</h1>
             <dl>
@@ -89,10 +89,10 @@ export default function InvoiceCetak() {
         <section className="doc-parties">
           <div>
             <h4>Dari</h4>
-            <p className="doc-name">{PERUSAHAAN.nama}</p>
-            {PERUSAHAAN.alamat.map((b) => <p key={b}>{b}</p>)}
-            <p>Telp: {PERUSAHAAN.telp || '-'}</p>
-            <p>Email: {PERUSAHAAN.email || '-'}</p>
+            <p className="doc-name">{KOP_INVOICE.nama}</p>
+            {KOP_INVOICE.alamat.map((b) => <p key={b}>{b}</p>)}
+            <p>Telp: {KOP_INVOICE.telp || '-'}</p>
+            <p>Email: {KOP_INVOICE.email || '-'}</p>
           </div>
           <div>
             <h4>{lunas ? 'Diterima oleh' : 'Ditagihkan kepada'}</h4>
@@ -161,13 +161,12 @@ export default function InvoiceCetak() {
 
         <footer className="doc-sign">
           <p>{tanggal(tglDokumen)}</p>
-          <p className="b">{PERUSAHAAN.nama}</p>
+          <p className="b">{KOP_INVOICE.nama}</p>
           <div className="doc-ttd">
-            <Gambar src={PERUSAHAAN.stempel} alt="" className="doc-stempel" />
-            <Gambar src={PERUSAHAAN.ttd} alt="Tanda tangan" className="doc-ttd-img" />
+            <Gambar src={KOP_INVOICE.ttd} alt="Tanda tangan" className="doc-ttd-img" />
           </div>
-          <p className="b">{PERUSAHAAN.penandatangan}</p>
-          <p className="b">{PERUSAHAAN.jabatan}</p>
+          <p className="b">{KOP_INVOICE.penandatangan}</p>
+          <p className="b">{KOP_INVOICE.jabatan}</p>
         </footer>
 
         {tampilBhp && (
