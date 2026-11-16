@@ -26,6 +26,12 @@ export const KOP_INVOICE = {
   telp: '(+62) 895-8028-50204',
   email: 'mersifacademy@gmail.com',
   logo: '/logo-mersif.png',
+  // Rekening tujuan pembayaran (tampil di invoice yang belum dibayar)
+  bank: {
+    nama: 'BTPN/SMBC (Sumitomo Mitsui Banking Corporation)',
+    noRek: '90014711562',
+    atasNama: 'Andreas Wegiq Adia Hendix',
+  },
 };
 
 // Blok tanda tangan invoice versi Mersif (penandatangan tetap dari .env)

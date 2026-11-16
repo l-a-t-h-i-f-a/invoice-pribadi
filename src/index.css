@@ -615,6 +615,13 @@ th.sortable { cursor: pointer; user-select: none; }
 .doc-cap:not(.doc-cap-lunas) strong { font-size: 24px; letter-spacing: 4px; }
 .doc-sign { clear: both; }
 
+/* Rekening tujuan pembayaran di invoice */
+.doc-bank { margin-top: 18px; font-size: 12px; max-width: 420px; }
+.doc-bank h4 { font-size: 13px; font-weight: 700; padding-bottom: 6px; border-bottom: 2px solid #111; margin-bottom: 6px; }
+.doc-bank dl { display: grid; grid-template-columns: 90px 1fr; gap: 2px 10px; margin: 0; }
+.doc-bank dd { margin: 0; }
+.doc-bank .b { font-weight: 700; font-size: 14px; letter-spacing: .5px; }
+
 /* Lampiran BHP: halaman 2 invoice */
 .cek-lampiran {
   display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--ink-soft);

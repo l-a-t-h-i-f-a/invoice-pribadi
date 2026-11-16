@@ -159,6 +159,17 @@ export default function InvoiceCetak() {
           {lunas ? `Jumlah yang telah dibayar ${rupiah(telahDibayar)}` : `Jumlah yang harus dibayar ${rupiah(inv.jumlah)}`}
         </p>
 
+        {!lunas && (
+          <section className="doc-bank">
+            <h4>Pembayaran melalui transfer ke</h4>
+            <dl>
+              <dt>Bank</dt><dd>{KOP_INVOICE.bank.nama}</dd>
+              <dt>No. Rekening</dt><dd className="b">{KOP_INVOICE.bank.noRek}</dd>
+              <dt>Atas Nama</dt><dd>{KOP_INVOICE.bank.atasNama}</dd>
+            </dl>
+          </section>
+        )}
+
         <footer className="doc-sign">
           <p>{tanggal(tglDokumen)}</p>
           <p className="b">{KOP_INVOICE.nama}</p>
